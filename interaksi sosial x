@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Interaksi Manusia dan Kuis</title>
+<style>
+:root{--navy:#17324d;--blue:#246b9e;--sky:#eaf5ff;--gold:#ffc857;--ink:#243447;--muted:#617386;--white:#fff;--green:#18865b;--red:#c34242}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f7fb;color:var(--ink);line-height:1.65}
+header{background:linear-gradient(120deg,#17324d,#287db0);color:white;padding:42px 20px;text-align:center}
+header .tag{display:inline-block;background:#ffffff25;border:1px solid #ffffff55;padding:5px 13px;border-radius:20px;font-size:.85rem}
+header h1{font-size:clamp(1.8rem,4vw,2.8rem);margin:12px 0 6px}header p{max-width:720px;margin:auto;color:#e4f2ff}
+nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 10px #17324d15;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px;z-index:5}
+nav a{color:var(--navy);text-decoration:none;font-weight:bold;padding:8px 13px;border-radius:20px}nav a:hover{background:var(--sky)}
+main{max-width:1050px;margin:28px auto;padding:0 17px}.card{background:white;border-radius:16px;padding:25px;margin:18px 0;box-shadow:0 5px 20px #17324d0d;border:1px solid #e7eef5}
+h2{color:var(--navy);margin-top:0;border-bottom:3px solid var(--gold);display:inline-block;padding-bottom:5px}
+h3{color:var(--blue);margin-bottom:6px}.lead{font-size:1.06rem;color:#43576b}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.tile{background:#f4f9fd;border-left:4px solid var(--blue);border-radius:10px;padding:15px}
+.callout{background:#fff8e8;border-left:5px solid var(--gold);padding:15px 18px;border-radius:9px;margin:15px 0}
+.pill{display:inline-block;background:#e8f4ff;color:#1e6393;padding:4px 10px;border-radius:15px;font-size:.85rem;font-weight:bold}
+ul,ol{padding-left:23px}.question{padding:17px 0;border-bottom:1px solid #e8eef3}.question:last-child{border:0}
+.question p{font-weight:bold;margin:0 0 10px}.option{display:block;padding:7px 10px;border-radius:8px;cursor:pointer}.option:hover{background:#f0f7fc}.option input{margin-right:8px}
+button{border:0;border-radius:9px;padding:12px 19px;font-size:1rem;font-weight:bold;cursor:pointer;background:var(--blue);color:white}button:hover{filter:brightness(.92)}button.secondary{background:#e8eef4;color:var(--navy);margin-left:7px}
+#result{display:none;margin-top:18px;padding:18px;border-radius:12px;background:#edf8f2;border:1px solid #b8e1ca}
+.feedback{font-size:.94rem;margin:8px 0;padding:9px;border-radius:7px}.correct{background:#eaf8f0;color:#146b47}.incorrect{background:#fff0f0;color:#a52d2d}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:.9rem}
+@media(max-width:600px){.card{padding:18px}nav a{font-size:.9rem;padding:6px 9px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="tag">MATERI SOSIOLOGI</span>
+  <h1>Interaksi Manusia</h1>
+  <p>Memahami hubungan timbal balik antarmanusia dalam kehidupan sehari-hari, beserta contoh dan kuis untuk menguji pemahaman.</p>
+</header>
+<nav>
+  <a href="#tujuan">Tujuan</a><a href="#pengertian">Pengertian</a><a href="#syarat">Syarat</a><a href="#bentuk">Bentuk</a><a href="#contoh">Contoh</a><a href="#kuis">Kuis</a>
+</nav>
+<main>
+<section class="card" id="tujuan">
+<h2>Tujuan Pembelajaran</h2>
+<p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p>
+<ul><li>Menjelaskan pengertian interaksi manusia atau interaksi sosial.</li><li>Mengidentifikasi syarat terjadinya interaksi sosial.</li><li>Membedakan bentuk-bentuk interaksi sosial.</li><li>Memberikan contoh interaksi sosial dalam kehidupan sehari-hari.</li></ul>
+</section>
+
+<section class="card" id="pengertian">
+<h2>1. Pengertian Interaksi Manusia</h2>
+<p class="lead"><b>Interaksi manusia</b> adalah hubungan timbal balik antara seseorang dengan orang lain, seseorang dengan kelompok, atau kelompok dengan kelompok yang saling memengaruhi.</p>
+<p>Interaksi terjadi ketika manusia saling berhubungan, berkomunikasi, dan memberikan tanggapan. Interaksi dapat berlangsung secara langsung maupun melalui media digital.</p>
+<div class="grid">
+<div class="tile"><h3>Interaksi langsung</h3><p>Bertatap muka, berbicara, berdiskusi, berjabat tangan, atau bekerja bersama.</p></div>
+<div class="tile"><h3>Interaksi tidak langsung</h3><p>Berkomunikasi melalui telepon, pesan singkat, surat elektronik, atau media sosial.</p></div>
+</div>
+<div class="callout"><b>Ingat!</b> Interaksi tidak hanya berarti berbicara. Senyuman, gerakan tubuh, dan tindakan yang mendapat tanggapan juga dapat menjadi bagian dari interaksi.</div>
+</section>
+
+<section class="card" id="syarat">
+<h2>2. Syarat Terjadinya Interaksi Sosial</h2>
+<div class="grid">
+<div class="tile"><span class="pill">Syarat 1</span><h3>Kontak sosial</h3><p>Adanya hubungan atau pertemuan antara pihak-pihak yang berinteraksi. Kontak dapat terjadi secara langsung atau melalui perantara.</p><p><b>Contoh:</b> menyapa teman, menelepon orang tua, atau mengirim pesan kepada guru.</p></div>
+<div class="tile"><span class="pill">Syarat 2</span><h3>Komunikasi</h3><p>Proses menyampaikan pesan dan memberikan tanggapan sehingga pihak lain memahami maksud pesan tersebut.</p><p><b>Contoh:</b> siswa bertanya dan guru menjawab pertanyaan.</p></div>
+</div>
+<div class="callout">Kontak sosial dan komunikasi merupakan dua syarat penting agar interaksi sosial dapat berlangsung.</div>
+</section>
+
+<section class="card" id="bentuk">
+<h2>3. Bentuk-Bentuk Interaksi Sosial</h2>
+<h3>A. Interaksi asosiatif (mengarah pada persatuan)</h3>
+<div class="grid">
+<div class="tile"><h3>Kerja sama</h3><p>Usaha bersama untuk mencapai tujuan.</p><b>Contoh:</b> siswa membersihkan kelas bersama.</div>
+<div class="tile"><h3>Akomodasi</h3><p>Usaha menyelesaikan pertentangan atau meredakan konflik.</p><b>Contoh:</b> dua teman berdamai setelah dimediasi guru.</div>
+<div class="tile"><h3>Asimilasi</h3><p>Proses pembauran dua kebudayaan atau lebih yang menghasilkan kebudayaan baru dan mengurangi perbedaan.</p><b>Contoh:</b> kebiasaan masyarakat yang berbeda berpadu dalam tradisi baru.</div>
+<div class="tile"><h3>Akulturasi</h3><p>Penerimaan unsur budaya asing tanpa menghilangkan kepribadian budaya sendiri.</p><b>Contoh:</b> bangunan dengan gaya arsitektur luar yang tetap memiliki ciri lokal.</div>
+</div>
+<h3>B. Interaksi disosiatif (mengarah pada pertentangan)</h3>
+<div class="grid">
+<div class="tile"><h3>Persaingan</h3><p>Usaha memperoleh sesuatu tanpa menggunakan kekerasan.</p><b>Contoh:</b> siswa berlomba mendapatkan nilai terbaik.</div>
+<div class="tile"><h3>Kontravensi</h3><p>Sikap menentang atau rasa tidak suka yang ditunjukkan secara tersembunyi atau tidak langsung.</p><b>Contoh:</b> menyebarkan desas-desus untuk menjatuhkan kelompok lain.</div>
+<div class="tile"><h3>Konflik</h3><p>Pertentangan terbuka akibat perbedaan kepentingan, pendapat, atau nilai.</p><b>Contoh:</b> dua kelompok bertengkar karena salah paham.</div>
+</div>
+</section>
+
+<section class="card" id="contoh">
+<h2>4. Interaksi Manusia dalam Kehidupan Sehari-hari</h2>
+<ol>
+<li><b>Di rumah:</b> anggota keluarga berdiskusi membagi tugas rumah.</li>
+<li><b>Di sekolah:</b> guru menjelaskan pelajaran dan siswa mengajukan pertanyaan.</li>
+<li><b>Di masyarakat:</b> warga bergotong royong membersihkan lingkungan.</li>
+<li><b>Di dunia digital:</b> siswa berdiskusi melalui grup kelas untuk mengerjakan tugas.</li>
+</ol>
+<p><b>Mengapa interaksi penting?</b> Interaksi membantu manusia memenuhi kebutuhan, bertukar informasi, membangun hubungan, bekerja sama, dan menyelesaikan masalah.</p>
+</section>
+
+<section class="card" id="kuis">
+<h2>5. Kuis Pemahaman</h2>
+<p>Jawablah 10 pertanyaan berikut. Pilih satu jawaban yang paling tepat, lalu tekan tombol <b>Periksa Jawaban</b>.</p>
+<form id="quiz">
+<div class="question"><p>1. Interaksi manusia merupakan hubungan yang bersifat ....</p>
+<label class="option"><input type="radio" name="q1" value="a"> A. Satu arah dan tidak memiliki tanggapan</label>
+<label class="option"><input type="radio" name="q1" value="b"> B. Timbal balik antara pihak-pihak yang berhubungan</label>
+<label class="option"><input type="radio" name="q1" value="c"> C. Selalu dilakukan secara tertulis</label>
+<label class="option"><input type="radio" name="q1" value="d"> D. Hanya terjadi di sekolah</label></div>
+<div class="question"><p>2. Dua syarat utama terjadinya interaksi sosial adalah ....</p>
+<label class="option"><input type="radio" name="q2" value="a"> A. Kontak sosial dan komunikasi</label>
+<label class="option"><input type="radio" name="q2" value="b"> B. Uang dan kekuasaan</label>
+<label class="option"><input type="radio" name="q2" value="c"> C. Persaingan dan konflik</label>
+<label class="option"><input type="radio" name="q2" value="d"> D. Tempat dan waktu</label></div>
+<div class="question"><p>3. Contoh kontak sosial tidak langsung adalah ....</p>
+<label class="option"><input type="radio" name="q3" value="a"> A. Berjabat tangan</label>
+<label class="option"><input type="radio" name="q3" value="b"> B. Berbicara tatap muka</label>
+<label class="option"><input type="radio" name="q3" value="c"> C. Mengirim pesan melalui telepon</label>
+<label class="option"><input type="radio" name="q3" value="d"> D. Bertemu di halaman sekolah</label></div>
+<div class="question"><p>4. Siswa membersihkan ruang kelas bersama merupakan contoh ....</p>
+<label class="option"><input type="radio" name="q4" value="a"> A. Konflik</label>
+<label class="option"><input type="radio" name="q4" value="b"> B. Kerja sama</label>
+<label class="option"><input type="radio" name="q4" value="c"> C. Kontravensi</label>
+<label class="option"><input type="radio" name="q4" value="d"> D. Persaingan</label></div>
+<div class="question"><p>5. Bentuk interaksi yang bertujuan meredakan pertentangan disebut ....</p>
+<label class="option"><input type="radio" name="q5" value="a"> A. Akomodasi</label>
+<label class="option"><input type="radio" name="q5" value="b"> B. Persaingan</label>
+<label class="option"><input type="radio" name="q5" value="c"> C. Konflik</label>
+<label class="option"><input type="radio" name="q5" value="d"> D. Kontravensi</label></div>
+<div class="question"><p>6. Persaingan antarsiswa untuk memperoleh juara kelas termasuk interaksi ....</p>
+<label class="option"><input type="radio" name="q6" value="a"> A. Asosiatif</label>
+<label class="option"><input type="radio" name="q6" value="b"> B. Disosiatif</label>
+<label class="option"><input type="radio" name="q6" value="c"> C. Akomodasi</label>
+<label class="option"><input type="radio" name="q6" value="d"> D. Kerja sama</label></div>
+<div class="question"><p>7. Proses pembauran budaya yang menghasilkan budaya baru disebut ....</p>
+<label class="option"><input type="radio" name="q7" value="a"> A. Konflik</label>
+<label class="option"><input type="radio" name="q7" value="b"> B. Persaingan</label>
+<label class="option"><input type="radio" name="q7" value="c"> C. Asimilasi</label>
+<label class="option"><input type="radio" name="q7" value="d"> D. Kontravensi</label></div>
+<div class="question"><p>8. Ketika siswa bertanya lalu guru menjawab, terjadi proses ....</p>
+<label class="option"><input type="radio" name="q8" value="a"> A. Komunikasi</label>
+<label class="option"><input type="radio" name="q8" value="b"> B. Konflik</label>
+<label class="option"><input type="radio" name="q8" value="c"> C. Persaingan</label>
+<label class="option"><input type="radio" name="q8" value="d"> D. Asimilasi</label></div>
+<div class="question"><p>9. Pertentangan terbuka antara dua kelompok disebut ....</p>
+<label class="option"><input type="radio" name="q9" value="a"> A. Kerja sama</label>
+<label class="option"><input type="radio" name="q9" value="b"> B. Akulturasi</label>
+<label class="option"><input type="radio" name="q9" value="c"> C. Akomodasi</label>
+<label class="option"><input type="radio" name="q9" value="d"> D. Konflik</label></div>
+<div class="question"><p>10. Contoh interaksi manusia di dunia digital adalah ....</p>
+<label class="option"><input type="radio" name="q10" value="a"> A. Membaca buku sendirian</label>
+<label class="option"><input type="radio" name="q10" value="b"> B. Berdiskusi melalui grup kelas daring</label>
+<label class="option"><input type="radio" name="q10" value="c"> C. Tidur di kamar</label>
+<label class="option"><input type="radio" name="q10" value="d"> D. Menonton tanpa berkomunikasi</label></div>
+<button type="button" onclick="checkAnswers()">Periksa Jawaban</button>
+<button type="reset" class="secondary" onclick="resetQuiz()">Ulangi Kuis</button>
+<div id="result" aria-live="polite"></div>
+</form>
+</section>
+</main>
+<footer>Materi pembelajaran • Interaksi Manusia • Semangat belajar!</footer>
+<script>
+const answers={q1:"b",q2:"a",q3:"c",q4:"b",q5:"a",q6:"b",q7:"c",q8:"a",q9:"d",q10:"b"};
+const explanations={
+q1:"Interaksi merupakan hubungan timbal balik yang melibatkan tanggapan.",
+q2:"Syarat utama interaksi sosial adalah kontak sosial dan komunikasi.",
+q3:"Pesan melalui telepon merupakan kontak tidak langsung.",
+q4:"Membersihkan kelas bersama adalah kerja sama.",
+q5:"Akomodasi merupakan usaha meredakan atau menyelesaikan pertentangan.",
+q6:"Persaingan termasuk proses disosiatif.",
+q7:"Asimilasi adalah pembauran budaya yang menghasilkan budaya baru.",
+q8:"Tanya jawab merupakan komunikasi karena ada pesan dan tanggapan.",
+q9:"Konflik merupakan pertentangan yang terjadi secara terbuka.",
+q10:"Diskusi dalam grup kelas daring adalah interaksi melalui media digital."
+};
+function checkAnswers(){
+ let score=0,unanswered=0,details="";
+ for(let i=1;i<=10;i++){
+  const key="q"+i,selected=document.querySelector('input[name="'+key+'"]:checked');
+  if(!selected)unanswered++;
+  const good=selected&&selected.value===answers[key];
+  if(good)score++;
+  details+='<div class="feedback '+(good?'correct':'incorrect')+'"><b>Nomor '+i+': '+(good?'Benar':'Belum tepat')+'.</b> '+explanations[key]+'</div>';
+ }
+ const box=document.getElementById("result");box.style.display="block";
+ box.innerHTML='<h3>Nilai kamu: '+(score*10)+'/100</h3><p>Jawaban benar: '+score+' dari 10.'+(unanswered?' Belum dijawab: '+unanswered+'.':' Semua soal sudah dijawab.')+'</p>'+details;
+ box.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function resetQuiz(){const box=document.getElementById("result");box.style.display="none";box.innerHTML="";}
+</script>
+</body>
+</html>
