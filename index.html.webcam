@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamera Web - Canvas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9; color: #1e293b;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh;
+    }
+    .kartu {
+      width: min(100%, 760px);
+      background: white; padding: 22px;
+      border-radius: 16px; box-shadow: 0 8px 28px #0f172a18;
+      text-align: center;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    p { color: #64748b; margin: 0 0 18px; }
+    canvas {
+      display: block; width: 100%; height: auto;
+      background: #0f172a; border-radius: 12px;
+      aspect-ratio: 4 / 3; object-fit: contain;
+    }
+    .tombol { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+    button {
+      border: 0; border-radius: 9px; padding: 11px 18px;
+      font-size: 15px; font-weight: bold; cursor: pointer;
+      background: #2563eb; color: white;
+    }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button.berhenti { background: #dc2626; }
+    button.foto { background: #059669; }
+    #pesan { min-height: 22px; margin-top: 14px; font-size: 14px; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="kartu">
+    <h1>Tampilan Webcam pada Canvas</h1>
+    <p>Tekan tombol Mulai Kamera dan izinkan akses webcam pada browser.</p>
+
+    <canvas id="kanvas" width="640" height="480"></canvas>
+
+    <div class="tombol">
+      <button id="mulai">Mulai Kamera</button>
+      <button id="berhenti" class="berhenti" disabled>Matikan Kamera</button>
+      <button id="foto" class="foto" disabled>Ambil Foto</button>
+    </div>
+    <div id="pesan" role="status">Kamera belum dinyalakan.</div>
+  </main>
+
+  <script>
+    const kanvas = document.getElementById("kanvas");
+    const konteks = kanvas.getContext("2d");
+    const tombolMulai = document.getElementById("mulai");
+    const tombolBerhenti = document.getElementById("berhenti");
+    const tombolFoto = document.getElementById("foto");
+    const pesan = document.getElementById("pesan");
+
+    const video = document.createElement("video");
+    video.autoplay = true;
+    video.playsInline = true;
+    video.muted = true;
+
+    let aliranKamera = null;
+    let animasi = null;
+
+    async function mulaiKamera() {
+      try {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          throw new Error("Browser tidak mendukung akses webcam. Buka halaman melalui HTTPS atau localhost.");
+        }
+
+        pesan.textContent = "Meminta izin akses kamera...";
+        aliranKamera = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "user" },
+          audio: false
+        });
+
+        video.srcObject = aliranKamera;
+        await video.play();
+
+        tombolMulai.disabled = true;
+        tombolBerhenti.disabled = false;
+        tombolFoto.disabled = false;
+        pesan.textContent = "Kamera aktif. Gambar ditampilkan pada canvas.";
+
+        function gambarKeCanvas() {
+          if (video.readyState >= 2) {
+            konteks.save();
+            // Membalik tampilan secara horizontal seperti cermin.
+            konteks.translate(kanvas.width, 0);
+            konteks.scale(-1, 1);
+            konteks.drawImage(video, 0, 0, kanvas.width, kanvas.height);
+            konteks.restore();
+          }
+          animasi = requestAnimationFrame(gambarKeCanvas);
+        }
+        gambarKeCanvas();
+      } catch (kesalahan) {
+        pesan.textContent = "Tidak dapat membuka kamera: " + kesalahan.message;
+      }
+    }
+
+    function berhentiKamera() {
+      if (animasi) cancelAnimationFrame(animasi);
+      if (aliranKamera) {
+        aliranKamera.getTracks().forEach(track => track.stop());
+        aliranKamera = null;
+      }
+      video.srcObject = null;
+      konteks.clearRect(0, 0, kanvas.width, kanvas.height);
+      konteks.fillStyle = "#0f172a";
+      konteks.fillRect(0, 0, kanvas.width, kanvas.height);
+      tombolMulai.disabled = false;
+      tombolBerhenti.disabled = true;
+      tombolFoto.disabled = true;
+      pesan.textContent = "Kamera sudah dimatikan.";
+    }
+
+    function ambilFoto() {
+      const tautan = document.createElement("a");
+      tautan.download = "foto-webcam.png";
+      tautan.href = kanvas.toDataURL("image/png");
+      tautan.click();
+      pesan.textContent = "Foto berhasil disimpan.";
+    }
+
+    tombolMulai.addEventListener("click", mulaiKamera);
+    tombolBerhenti.addEventListener("click", berhentiKamera);
+    tombolFoto.addEventListener("click", ambilFoto);
+
+    // Tampilan awal canvas.
+    konteks.fillStyle = "#0f172a";
+    konteks.fillRect(0, 0, kanvas.width, kanvas.height);
+    konteks.fillStyle = "#cbd5e1";
+    konteks.font = "20px Arial";
+    konteks.textAlign = "center";
+    konteks.fillText("Pratinjau webcam akan muncul di sini", kanvas.width / 2, kanvas.height / 2);
+  </script>
+</body>
+</html>
